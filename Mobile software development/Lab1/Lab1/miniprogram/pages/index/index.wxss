@@ -1,0 +1,78 @@
+/* 整体容器，三段布局 */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #f9f9f9;
+}
+
+/* 顶部标题 */
+.top {
+  position: absolute;
+  top: 60rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 中间头像 */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 精确居中 */
+}
+.avatar-wrapper {
+  width: 220rpx;
+  height: 220rpx;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #f6f8fa, #e9ebee);
+  transition: transform 0.2s ease-in-out;
+}
+.avatar-wrapper:active .avatar {
+  transform: scale(0.92);
+}
+
+/* 底部昵称输入框 */
+.bottom {
+  position: absolute;
+  bottom: 60rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+}
+
+/* 输入框样式 */
+.nickname-input {
+  width: 70%;
+  padding: 16rpx;
+  font-size: 32rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 12rpx;
+  background: #fff;
+  text-align: center;       /* 文字水平居中 */
+  box-shadow: inset 0 2rpx 6rpx rgba(0,0,0,0.05);
+}
+
+/* 显示文本昵称 */
+.nickname-text {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333;
+  text-align: center;       /* 文字水平居中 */
+  width: 70%;               /* 宽度与输入框一致 */
+}

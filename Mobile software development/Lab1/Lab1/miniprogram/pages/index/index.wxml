@@ -1,0 +1,19 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="top">
+    <text class="title">Hello World</text>
+  </view>
+
+  <!-- 中间头像 -->
+  <view class="middle">
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image class="avatar" src="{{avatarUrl}}"></image>
+    </button>
+  </view>
+
+  <!-- 底部昵称输入框 -->
+  <view class="bottom">
+    <view wx:if="{{nickname}}" class="nickname-text">{{nickname}}</view>
+    <input wx:else type="nickname" bindinput="getName" class="nickname-input" placeholder="请输入昵称"/>
+  </view>
+</view>
