@@ -1,0 +1,18 @@
+<!--pages/game/game.wxml-->
+<view class="container">
+  <!-- reminder  -->
+  <view class="title">the {{level}} pass</view>
+  <!-- canvas  -->
+  <canvas canvas-id="myCanvas"></canvas>
+  <!-- direction key  -->
+  <view class="btnBox">
+    <button type = 'warn'bindtap='up'>⬆️</button>
+    <view>
+      <button type='warn'bindtap='left'>⬅️</button>
+      <button type='warn'bindtap='down'>⬇️</button>
+      <button type='warn'bindtap='right'>➡️</button>
+    </view>
+  </view>
+  <!-- #restart btn  -->
+  <button type='warn'bindtap='restartGame'>restart</button>
+</view>

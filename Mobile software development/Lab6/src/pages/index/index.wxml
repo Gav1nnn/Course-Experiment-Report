@@ -1,0 +1,11 @@
+<view class="container">
+  <!-- Title -->
+  <view class = 'title'>Game selection</view>
+  <!-- Game list  -->
+    <view class="levelBox">
+    <view class='box' wx:for="{{levels}}" wx:key="levels{{index}}" bindtap = 'chooseLevel' data-level = '{{index}}'>
+      <image src = '/images/{{item}}'></image>
+      <text>the {{index + 1}} pass</text>
+    </view>
+  </view>
+</view>
